@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Wedding Stage Decoration",
+      "image": "https://i.ibb.co/6WBXHT3/stage.jpg",
+      "price": 250,
+      "description": "We provide premium Wedding Stage Design & Decoration in Bangladesh."
+    },
+    {
+      "id": 2,
+      "name": "Gaye Holud Stage Decoration",
+      "image": "https://i.ibb.co/rmpv9zh/holud-stage.jpg",
+      "price": 230,
+      "description": "We provide premium Holud Stage Design & Decoration in Bangladesh."
+    },
+    {
+      "id": 3,
+      "name": "Wedding Venue Ceiling Decoration",
+      "image": "https://i.ibb.co/fX3jGxp/vanue.jpg",
+      "price": 260,
+      "description": "We provide premium and exclusive decoration services in Bangladesh."
+    },
+    {
+      "id": 4,
+      "name": "Wedding Photography and Videography",
+      "image": "https://i.ibb.co/w02BQhz/photograpy.jpg",
+      "price": 300,
+      "description": "We provide premium Bridal photography services in all over Bangladesh."
+    },
+    {
+      "id": 5,
+      "name": "Wedding Car Decoration",
+      "image": "https://i.ibb.co/9gJWpmD/car.jpg",
+      "price": 200,
+      "description": "We provide premium car flower decoration services in Bangladesh."
+    },
+    {
+      "id": 6,
+      "name": "Wedding Entrance Decoration",
+      "image": "https://i.ibb.co/xGpfwBL/out-gate.jpg",
+      "price": 250,
+      "description": "We provide premium entrance design & decoration services in Bangladesh."
+    }
+  ]
+  
