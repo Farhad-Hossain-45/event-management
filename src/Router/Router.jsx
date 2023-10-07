@@ -7,6 +7,7 @@ import Error from '../components/Error/Error';
 import About from '../Pages/About/About';
 import Contact from '../Pages/Contact/Contact';
 import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register';
 
 const Router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const Router = createBrowserRouter([
            {
             path: "/contact",
             element: <Contact></Contact>
+           },
+           {
+            path: "/register",
+            element: <Register></Register>
            },
            {
             path: "/login",

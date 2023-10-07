@@ -9,9 +9,10 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About Us</NavLink></li>
         <li><NavLink to="/contact">Contact Us</NavLink></li>
+        <li><NavLink to="/register">Register</NavLink></li>
     </>
     return (
-        <div className="navbar shadow-md bg-pink-50">
+        <div className="navbar shadow-md bg-pink-50 sticky top-0">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +30,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to="/login"><button className='btn'>Login</button></Link>
+    <Link to="/login"><button className='btn rounded-xl bg-pink-100'>Login</button></Link>
     
   </div>
 </div>
