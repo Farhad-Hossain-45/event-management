@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import Banner from '../../components/Banner/Banner';
+import Cards from '../../components/Cards/CARDS.JSX';
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home page</h1>
+            <Banner></Banner>
+            <Cards></Cards>
         </div>
     );
 };
