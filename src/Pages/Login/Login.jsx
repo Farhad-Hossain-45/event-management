@@ -35,6 +35,10 @@ const Login = () => {
       setError('please provide 6 characters or longer');
       return
     }
+    // else if(!/[A-Z]/.test(password)){
+    //   setError('please provide a password with uppercase and special character')
+    //   return
+    // }
     
   }
   const handelGoogleSignIn = (e) => {
@@ -87,6 +91,9 @@ const Login = () => {
                 {
                   error && <p className="text-xl text-red-700">{error}</p>
                 }
+                {/* {
+                  error && <p className="text-xl text-red-700">{error}</p>
+                } */}
                 {/* {
                   success && <p className="text-green-600 text-xl">{success}</p>
                 } */}

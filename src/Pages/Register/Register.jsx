@@ -17,6 +17,7 @@ const Register = () => {
     const photo = form.get('photo')
     const email = form.get('email')
     const password = form.get('password')
+    setError('')
     // console.log(name,photo,email,password)
     createUser(email,password)
     .then(result => {
@@ -40,8 +41,16 @@ const Register = () => {
       setError('please provide 6 characters or longer');
       return
     }
+    else if(!/[A-Z]/.test(password)){
+      setError('You should have a uppercase')
+      return
+    }
+    else if(!/[!@#$%^&*()_+{}/[\]:;<>,.?~\\|]/.test(password)){
+      setError('You should have a special character')
+      return
+    }
     
-    toast('register successfully')
+    toast('Register Successfully')
   }
   
     return (
