@@ -12,7 +12,7 @@ const About = () => {
         <div>
             <div>
                 <h1 className='text-center font-bold text-pink-300 mt-10 text-6xl'>About US!!</h1>
-                <p className='text-center mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Nisi ipsa quos maiores.</p>
+                <p className='text-center mt-3'>We make your special day more special</p>
                 <div className='flex gap-3 justify-center mt-3'>
                 <Link to="/" className='text-blue-400 underline'>Home</Link>
                 {/* <Link to="/about" className='text-blue-400 underline'>About</Link> */}

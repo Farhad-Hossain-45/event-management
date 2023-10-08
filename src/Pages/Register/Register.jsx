@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../components/AuthProvider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext)
+  const [error,setError] = useState('')
+  const {createUser,logOut} = useContext(AuthContext)
 
   const handelRegister = e => {
     e.preventDefault()
@@ -16,13 +20,30 @@ const Register = () => {
     // console.log(name,photo,email,password)
     createUser(email,password)
     .then(result => {
+      logOut()
       console.log(result.user)
+      updateProfile(result.user,{
+        displayName: name,
+        photoURL: photo
+      })
+      .then(()=>{
+
+      })
+      .catch((error)=>{
+        console.error(error)
+      })
     })
     .catch(error => {
       console.error(error)
     })
+    if(password.length < 6){
+      setError('please provide 6 characters or longer');
+      return
+    }
     
+    toast('register successfully')
   }
+  
     return (
         <div className=" bg-pink-100 mt-3">
         <h3 className='text-center text-4xl font-semibold my-2'>Please Register!!!</h3>
@@ -40,7 +61,8 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
-                <input type="text" placeholder="photo URL" name='photo' className="input input-bordered" required />
+                <input type="url" placeholder="photo URL" name='photo' className="input input-bordered" required />
+                input:
               </div>
               <div className="form-control">
                 <label className="label">
@@ -56,11 +78,15 @@ const Register = () => {
                 <label className="label">
                   
                 </label>
+                {
+                  error && <p className="text-xl text-red-700">{error}</p>
+                }
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-pink-300 text-white">Register</button>
               </div>
             </form>
+                <ToastContainer></ToastContainer>
             <p className="text-center mb-10">Do not Have An Account ?<Link  className="text-blue-500 underline" to="/login" >Login</Link></p>
           </div>
         </div>

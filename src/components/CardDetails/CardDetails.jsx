@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Details from '../Details/Details';
+import { ToastContainer } from 'react-toastify';
 
 const CardDetails = () => {
     const [card,setCard] = useState({})
@@ -17,6 +18,7 @@ const CardDetails = () => {
     return (
         <div>
             <Details card = {card}></Details>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
