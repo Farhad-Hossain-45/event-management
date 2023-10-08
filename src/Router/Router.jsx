@@ -9,6 +9,7 @@ import Contact from '../Pages/Contact/Contact';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import CardDetails from '../components/CardDetails/CardDetails';
+import PrivetRouter from './PrivetRouter/PrivetRouter';
 
 const Router = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ const Router = createBrowserRouter([
            },
            {
             path: "/cards/:id",
-            element: <CardDetails></CardDetails>,
+            element: <PrivetRouter><CardDetails></CardDetails></PrivetRouter>,
             loader: ()=>fetch('/event.json')
            }
         ]
