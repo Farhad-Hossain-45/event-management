@@ -10,7 +10,9 @@ const Organizer = () => {
     return (
         <div className='mt-10'>
             <div className='grid md:grid-cols-2 grid-cols-1 items-center bg-pink-50 '>
-                <div>
+                <div data-aos="fade-down"
+                    data-aos-easing="linear"
+                     data-aos-duration="1500">
                     <img className='w-32 h-20 mx-auto' src={logo} alt="" />
                     <h2 className='text-center text-2xl mt-2 text-pink-400 font-semibold'>Meet Our Creative <br /> Event Organizer</h2>
                     <button className='flex mt-2 mx-auto bg-pink-500 px-4 py-1.5 rounded-lg text-white hover:bg-pink-300'>Explore</button>
