@@ -9,4 +9,6 @@
 
 5. This website has a navbar so that user can easily go to his wanted page.
 
+Website Name: Wedding Event Planner.
+
 Live link : https://ninth-assignment-12921.web.app/

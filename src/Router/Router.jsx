@@ -24,11 +24,11 @@ const Router = createBrowserRouter([
             },
            {
             path: "/about",
-            element: <About></About>
+            element: <PrivetRouter><About></About></PrivetRouter>
            },
            {
             path: "/contact",
-            element: <Contact></Contact>
+            element: <PrivetRouter><Contact></Contact></PrivetRouter>
            },
            {
             path: "/register",
