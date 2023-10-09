@@ -29,12 +29,12 @@ const Login = () => {
       navigate(location?.state ? location.state : '/')
     })
     .catch(error => {
-      console.error(error)
+      console.error(error.message)
+      setError('Email password do not match')
+      
     })
-    if(password.length < 6){
-      setError('please provide 6 characters or longer');
-      return
-    }
+    
+   
     // else if(!/[A-Z]/.test(password)){
     //   setError('please provide a password with uppercase and special character')
     //   return
@@ -47,15 +47,18 @@ const Login = () => {
     .then(result => {
       console.log(result.user)
       navigate(location?.state ? location.state : '/')
+     
     })
     .catch(error => {
       console.error(error.message)
+     
       
     })
     
   }
   const handelLoginBtn=()=>{
     toast('login successfully')
+    
   }
     return (
         <div className=" bg-pink-100 mt-3">
@@ -92,21 +95,14 @@ const Login = () => {
                 {
                   error && <p className="text-xl text-red-700">{error}</p>
                 }
-                {/* {
-                  error && <p className="text-xl text-red-700">{error}</p>
-                } */}
-                {/* {
-                  success && <p className="text-green-600 text-xl">{success}</p>
-                } */}
+                
               </div>
               <div className="form-control mt-6">
                 <button onClick={handelLoginBtn} className="btn bg-pink-300 text-white">Login</button>
               </div>
             </form>
                 
-            {
-              <p>{error}</p>
-            }
+            
             <p className="text-center mb-10">Do not Have An Account ? <Link className="text-blue-500 underline" to="/register" >Register</Link></p>
           </div>
         </div>
